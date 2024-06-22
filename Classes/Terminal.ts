@@ -3,6 +3,13 @@ import { program, command, Program } from "bandersnatch"
 import { Robot } from "./Robot.ts"
 import { Table } from "./Table.ts"
 
+/**
+ * A controlling class that manages the interactions
+ * of a user and a robot navigating a table.
+ * 
+ * Uses bandersnatch to provide a simple REPL cli
+ * that accepts commands and reports on state.
+ */
 export class Terminal {
     private readonly table: Table
     private readonly robot: Robot
@@ -16,6 +23,11 @@ export class Terminal {
         this.setupTerminal()
     }
 
+    /**
+     * This function adds all the supported
+     * commands for the robot, but does not
+     * start the cli.
+     */
     private setupTerminal = () => {
         this.terminal
             .add(
@@ -61,6 +73,11 @@ export class Terminal {
             )
     }
 
+    /**
+     * Starts the cli in REPL mode and also
+     * provides a custom error handler
+     * that will hide verbose stack traces.
+     */
     public start() {
         // Print error message only (omit stack trace) and exit with a meaningful status
         const fail = (error: any) => {
@@ -76,6 +93,13 @@ export class Terminal {
             .catch(fail)
     }
 
+    /**
+     * Provides the supplied command as an argument
+     * to the run mode CLI. Will exit immediately.
+     * Predominantly used for testing.
+     * 
+     * @param command 
+     */
     public async runCommand(command: string) {
         await this.terminal
             .run(command)

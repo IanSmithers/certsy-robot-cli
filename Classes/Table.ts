@@ -1,5 +1,8 @@
 import { Bounds } from "../Types/CustomTypes.ts";
 
+/**
+ * A bare bones class that represents a 2D plane - aka, table.
+ */
 export class Table {
     private readonly _bounds: Bounds = { minX: 0, maxX: 0, minY: 0, maxY: 0 }
 

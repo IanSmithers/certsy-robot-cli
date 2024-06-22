@@ -1,3 +1,4 @@
+/** Entry Point */
 
 import { Robot } from "./Classes/Robot.ts"
 import { Table } from "./Classes/Table.ts"

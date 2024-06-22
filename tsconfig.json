@@ -23,8 +23,8 @@
         "noUnusedParameters": true,
         "noFallthroughCasesInSwitch": true,
         "paths": {
-            "Components/*": [
-                "Classes/*"
+            "Classes/*": [
+                "./Classes/*"
             ],
             "Types/*": [
                 "./Types/*"
