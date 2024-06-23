@@ -79,6 +79,7 @@ export class Terminal {
      * that will hide verbose stack traces.
      * 
      * NOTE: The pragma ignores this code from test coverage.
+     * From: https://github.com/gotwarlost/istanbul/blob/master/ignoring-code-for-coverage.md
      */
     /* istanbul ignore next */
     public start() {
