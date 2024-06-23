@@ -10,8 +10,8 @@ import { Bounds, Vector2D, CardinalDirection, RotationDirection, CardinalDirecti
  */
 export const isInBounds = (bounds: Bounds, position: Vector2D) => {
     return (
-        (position.x >= 0 && position.x < bounds.minX + bounds.maxX) &&
-        (position.y >= 0 && position.y < bounds.minY + bounds.maxY)
+        (position.x >= 0 && position.x <= bounds.minX + bounds.maxX) &&
+        (position.y >= 0 && position.y <= bounds.minY + bounds.maxY)
     )
 }
 

@@ -25,6 +25,49 @@ describe('move/1.', () => {
 
         expect(consoleSpy).toHaveBeenLastCalledWith('1,0 EAST')
     })
+
+    test('PLACE;MOVE to x boundary and REPORT', () => {
+        const consoleSpy = jest.spyOn(console, "log")
+
+        const robot = new Robot()
+        robot.place(['0,0,EAST'], bounds)
+
+        // Move 5 on the x axis to the halfway point.
+        robot.move(bounds)
+        robot.move(bounds)
+        robot.move(bounds)
+        robot.move(bounds)
+        robot.move(bounds)
+
+        // Move the final 5 to the boundary.
+        robot.move(bounds)
+        robot.move(bounds)
+        robot.move(bounds)
+        robot.move(bounds)
+        robot.move(bounds)
+
+        robot.report()
+
+        expect(consoleSpy).toHaveBeenLastCalledWith('10,0 EAST')
+    })
+
+    test('PLACE;MOVE to x boundary and REPORT', () => {
+        const consoleSpy = jest.spyOn(console, "log")
+
+        const robot = new Robot()
+        robot.place(['0,0,NORTH'], bounds)
+
+        // Move 5 on the y axis to the boundary.
+        robot.move(bounds)
+        robot.move(bounds)
+        robot.move(bounds)
+        robot.move(bounds)
+        robot.move(bounds)
+
+        robot.report()
+
+        expect(consoleSpy).toHaveBeenLastCalledWith('0,5 NORTH')
+    })
 })
 
 describe('left/0', () => {
