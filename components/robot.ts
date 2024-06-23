@@ -99,8 +99,12 @@ export class Robot {
      */
     private parsePlaceCommandData = (data: string[]) => {
         if (data.length === 3) {
-            try {
+            const x = parseInt(data[0])
+            const y = parseInt(data[1])
+
+            if (!isNaN(x) && !isNaN(y)) {
                 const coordinates: Vector2D = { x: parseInt(data[0]), y: parseInt(data[1]) }
+
                 const facing = data[2]
                 if (isValueCardinalDirection(facing)) {
                     const transform: Transform = { position: coordinates, direction: facing }
@@ -111,7 +115,7 @@ export class Robot {
                     console.error('parsePlaceCommandData failed, data did not contain a cardinal direction.')
                 }
             }
-            catch {
+            else {
                 console.error('parsePlaceCommandData failed, data was malformed.')
             }
         } else {
