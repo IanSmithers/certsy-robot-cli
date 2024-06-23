@@ -1,7 +1,7 @@
 
-import { Table } from "../components/table";
+import { Table } from "components/table";
 
-import { Bounds } from "../types/custom-types";
+import { Bounds } from "types/custom-types";
 
 describe('table ctor bounds', () => {
     test('non-zero coordinate magnitudes', () => {

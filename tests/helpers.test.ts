@@ -1,5 +1,5 @@
-import { getDirectionData, isInBounds, isValueCardinalDirection, rotateDirection } from "../helpers/helpers"
-import { Bounds, Vector2D, CardinalDirection, RotationDirection } from '../types/custom-types.ts'
+import { getDirectionData, isInBounds, isValueCardinalDirection, rotateDirection } from "helpers/helpers"
+import { Bounds, Vector2D, CardinalDirection, RotationDirection } from 'types/custom-types.ts'
 
 describe('isInBounds/2', () => {
     const bounds: Bounds = { minX: 0, minY: 0, maxX: 10, maxY: 25 }

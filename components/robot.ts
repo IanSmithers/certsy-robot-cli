@@ -1,4 +1,4 @@
-import { Bounds, RotationDirection, Transform, Vector2D } from "../types/custom-types.ts";
+import { Bounds, RotationDirection, Transform, Vector2D } from "types/custom-types.ts";
 import { getDirectionData, isInBounds, rotateDirection, isValueCardinalDirection } from "../helpers/helpers.ts";
 
 /**
