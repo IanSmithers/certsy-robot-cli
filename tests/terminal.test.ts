@@ -87,4 +87,18 @@ describe('PLACE;MOVE;LEFT;REPORT commands execute with correct final position.',
 
         expect(consoleSpy).toHaveBeenLastCalledWith('3,3 NORTH')
     })
+
+    test('issue PLACE 4,2,WEST;MOVE;RIGHT;MOVE;RIGHT;MOVE commands and REPORT.', async () => {
+        const consoleSpy = jest.spyOn(console, "log")
+
+        await terminal.runCommand('PLACE 4,2,WEST')
+        await terminal.runCommand('MOVE')
+        await terminal.runCommand('RIGHT')
+        await terminal.runCommand('MOVE')
+        await terminal.runCommand('RIGHT')
+        await terminal.runCommand('MOVE')
+        await terminal.runCommand('REPORT')
+
+        expect(consoleSpy).toHaveBeenLastCalledWith('4,3 EAST')
+    })
 })

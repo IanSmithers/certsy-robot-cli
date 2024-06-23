@@ -77,7 +77,10 @@ export class Terminal {
      * Starts the cli in REPL mode and also
      * provides a custom error handler
      * that will hide verbose stack traces.
+     * 
+     * NOTE: The pragma ignores this code from test coverage.
      */
+    /* istanbul ignore next */
     public start() {
         // Print error message only (omit stack trace) and exit with a non-zero status
         const fail = (error: any) => {

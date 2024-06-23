@@ -18,7 +18,15 @@ describe('table ctor bounds', () => {
 
     test('negative magnitudes are invalid and throw a RangeError', () => {
         const creatInvalidTable = () => {
-            new Table(-5, -10)
+            new Table(-5, 10)
+        }
+
+        expect(creatInvalidTable).toThrow()
+    })
+
+    test('negative magnitudes are invalid and throw a RangeError', () => {
+        const creatInvalidTable = () => {
+            new Table(5, -10)
         }
 
         expect(creatInvalidTable).toThrow()

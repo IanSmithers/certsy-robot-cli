@@ -154,9 +154,6 @@ export class Robot {
                     console.warn(`Placement position is outside of the bounds. Must be within X:${bounds.minX} to ${bounds.maxX} and Y:${bounds.minY} to ${bounds.maxY}.`)
                 }
             }
-            else {
-                console.error('Placement parse result is undefined.')
-            }
         }
         else {
             console.warn('Placement command must be in the form of "PLACE X,Y,F".')

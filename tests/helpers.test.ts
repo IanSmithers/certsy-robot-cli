@@ -39,6 +39,12 @@ describe('isInBounds/2', () => {
 
         expect(isInBounds(bounds, position)).toBe(false)
     })
+
+    test('position equal to origin of 0,0', () => {
+        const position: Vector2D = { x: 0, y: 0 }
+
+        expect(isInBounds(bounds, position)).toBe(true)
+    })
 })
 
 describe('rotateDirection/2', () => {
