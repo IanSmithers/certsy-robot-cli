@@ -1,4 +1,4 @@
-import { Bounds } from "../types/custom-types.ts";
+import { Bounds } from "types/custom-types.ts";
 
 /**
  * A bare bones class that represents a 2D plane - aka, table.
