@@ -1,8 +1,8 @@
 /** Entry Point */
 
-import { Robot } from "./Classes/Robot.ts"
-import { Table } from "./Classes/Table.ts"
-import { Terminal } from "./Classes/Terminal.ts"
+import { Robot } from "./components/robot.ts"
+import { Table } from "./components/table.ts"
+import { Terminal } from "./components/terminal.ts"
 
 const table = new Table(5, 5)
 const robot = new Robot()

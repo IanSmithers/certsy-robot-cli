@@ -1,6 +1,6 @@
 /**
  * A bounding rect represented by min/max X and Y values
- * on a 2D plane.
+ * on a 2D plane. Origin can be considered as minX,minY.
  */
 export type Bounds = {
     minX: number,
@@ -32,23 +32,12 @@ export type Transform = {
  * this to use an enum, however the author advises
  * against this as it creates overly complex code.
  */
-const CardinalDirections = ['NORTH', 'EAST', 'SOUTH', 'WEST'] as const
+export const CardinalDirections = ['NORTH', 'EAST', 'SOUTH', 'WEST'] as const
 type typedCardinalDirectionsList = typeof CardinalDirections
 
 // Neat pattern from https://www.typescriptlang.org/docs/handbook/2/indexed-access-types.html
 // Indexing with `number` can be thought of as indexing with `all numbers` to get all the elements.
 export type CardinalDirection = typedCardinalDirectionsList[number]
-
-/**
- * Verifies whether the incoming string value is a valid
- * cardinal direction.
- * 
- * @param value 
- * @returns 
- */
-export const isValueCardinalDirection = (value: string): value is CardinalDirection => {
-    return CardinalDirections.includes(value as CardinalDirection)
-}
 
 // CW = clockwise. CCW = counter-clockwise.
 export enum RotationDirection {

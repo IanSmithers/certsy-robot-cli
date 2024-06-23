@@ -24,13 +24,13 @@
         "noFallthroughCasesInSwitch": true,
         "paths": {
             "Classes/*": [
-                "./Classes/*"
+                "components/*"
             ],
             "Types/*": [
-                "./Types/*"
+                "types/*"
             ],
             "Utils/*": [
-                "./Utils/*"
+                "helpers/*"
             ]
         }
     }

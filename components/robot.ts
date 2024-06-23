@@ -1,5 +1,5 @@
-import { Bounds, RotationDirection, Transform, Vector2D, isValueCardinalDirection } from "../Types/CustomTypes.ts";
-import { getDirectionData, isInBounds, rotateDirection } from "../Utils/Utils.ts";
+import { Bounds, RotationDirection, Transform, Vector2D } from "../types/custom-types.ts";
+import { getDirectionData, isInBounds, rotateDirection, isValueCardinalDirection } from "../helpers/helpers.ts";
 
 /**
  * A class that represents a robot with some basic
@@ -10,7 +10,7 @@ import { getDirectionData, isInBounds, rotateDirection } from "../Utils/Utils.ts
 export class Robot {
     private readonly transform: Transform = { position: { x: 0, y: 0 }, direction: 'NORTH' }
     private placed: boolean = false
-    private readonly unplacedErrorStr: string = 'Robot has not been placed yet. Please run "PLACE X:(number),Y(number),F(string)" at least once first.'
+    private readonly unplacedErrorStr: string = 'Robot has not been placed yet. Please run "PLACE (number),(number),(string)" at least once first.'
 
     public constructor() { }
 

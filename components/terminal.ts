@@ -1,7 +1,7 @@
 import { program, command, Program } from "bandersnatch"
 
-import { Robot } from "./Robot.ts"
-import { Table } from "./Table.ts"
+import { Robot } from "./robot.ts"
+import { Table } from "./table.ts"
 
 /**
  * A controlling class that manages the interactions
@@ -79,7 +79,7 @@ export class Terminal {
      * that will hide verbose stack traces.
      */
     public start() {
-        // Print error message only (omit stack trace) and exit with a meaningful status
+        // Print error message only (omit stack trace) and exit with a non-zero status
         const fail = (error: any) => {
             console.error("rejected:", String(error));
 

@@ -1,4 +1,4 @@
-import { Bounds, Vector2D, CardinalDirection, RotationDirection } from '../Types/CustomTypes.ts'
+import { Bounds, Vector2D, CardinalDirection, RotationDirection, CardinalDirections } from '../types/custom-types.ts'
 
 /**
  * Calculates whether a 2D position represented by a two point
@@ -82,4 +82,15 @@ export const getDirectionData = (facingDirection: CardinalDirection) => {
         console.error(`getFacingValue failed, unsupported facing direction (${facingDirection}) specified.`)
         return { x: 0, y: 0 }
     }
+}
+
+/**
+ * Verifies whether the incoming string value is a valid
+ * cardinal direction.
+ * 
+ * @param value 
+ * @returns 
+ */
+export const isValueCardinalDirection = (value: string): value is CardinalDirection => {
+    return CardinalDirections.includes(value as CardinalDirection)
 }
