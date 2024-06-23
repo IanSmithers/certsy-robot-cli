@@ -60,9 +60,6 @@ export const rotateDirection = (currentDirection: CardinalDirection, rotation: R
         case RotationDirection.CCW:
             const ccwRotatedIndex = (currentIndex + numberOfCardinalDirections + ccwDirection) % numberOfCardinalDirections
             return keys[ccwRotatedIndex] as CardinalDirection
-        default:
-            return currentDirection
-            break;
     }
 }
 
@@ -74,14 +71,7 @@ export const rotateDirection = (currentDirection: CardinalDirection, rotation: R
  * @returns 
  */
 export const getDirectionData = (facingDirection: CardinalDirection) => {
-    try {
-        const result = facingNameToDirectionMap[facingDirection]
-        return result
-    }
-    catch {
-        console.error(`getFacingValue failed, unsupported facing direction (${facingDirection}) specified.`)
-        return { x: 0, y: 0 }
-    }
+    return facingNameToDirectionMap[facingDirection]
 }
 
 /**
