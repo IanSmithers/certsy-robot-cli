@@ -118,7 +118,7 @@ Simply run:
 npm run build
 ```
 
-The built application will be in the lib directory.
+The built application will be in the `./build` directory.
 
 ## Maintainers
 
