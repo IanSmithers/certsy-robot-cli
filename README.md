@@ -97,6 +97,8 @@ The CLI will accept the following (case-sensitive) commands:
 - RIGHT
 - REPORT
 
+To exit press `CTRL C` twice.
+
 ### Testing
 
 To run the tests:
@@ -104,11 +106,6 @@ To run the tests:
 ```sh
 npm t
 ```
-
-#### Test Coverage
-
-There are test coverage results which will be generated in the `./coverage` area as well as be printed to the terminal once tests finishing running.
-You can view an HTML test coverage report from `./coverage/lcov-report/index.html`.
 
 ### Build
 
@@ -119,6 +116,11 @@ npm run build
 ```
 
 The built application will be in the `./build` directory.
+
+#### Test Coverage
+
+There are test coverage results which will be generated in the `./coverage` area as well as be printed to the terminal once tests finishing running.
+You can view an HTML test coverage report from `./coverage/lcov-report/index.html`.
 
 ## Maintainers
 
