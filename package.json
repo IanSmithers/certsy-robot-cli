@@ -2,10 +2,10 @@
   "name": "robot-cli",
   "version": "1.0.0",
   "description": "A CLI to command and control a virtual robot.",
-  "main": "lib/index.js",
+  "main": "build/index.js",
   "scripts": {
     "test": "jest",
-    "build": "babel src -d lib --extensions .ts,.js --ignore **/*.test.ts"
+    "build": "babel src -d build --extensions .ts,.js --ignore **/*.test.ts"
   },
   "author": "Ian Smithers",
   "license": "ISC",

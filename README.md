@@ -59,8 +59,32 @@ This repository has two main parts that can be executed:
 
 To run the CLI:
 
+#### TypeScript
+
+You need to use `ts-node` installed globally to run TypeScript from the command line:
+
+```sh
+npm install -g ts-node
+```
+
+Then you can execute:
+
 ```sh
 ts-node ./src/index.ts
+```
+
+#### JavaScript
+
+First build the project:
+
+```sh
+npm run build
+```
+
+This will place built assets in the `./build` directory, then you can execute:
+
+```sh
+node ./build/index.js
 ```
 
 #### Issuing Commands
@@ -83,8 +107,8 @@ npm t
 
 #### Test Coverage
 
-There are test coverage results which will be generated in the `tests/coverage` area as well as be printed to the terminal once tests finishing running.
-You can view an HTML test coverage report from `tests/coverage/lcov-report/index.html`.
+There are test coverage results which will be generated in the `./coverage` area as well as be printed to the terminal once tests finishing running.
+You can view an HTML test coverage report from `./coverage/lcov-report/index.html`.
 
 ### Build
 

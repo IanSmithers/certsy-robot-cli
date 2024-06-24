@@ -133,4 +133,4 @@ dist
 tests/coverage
 
 # babel build
-lib
+build
