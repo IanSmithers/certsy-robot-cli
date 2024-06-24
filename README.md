@@ -86,6 +86,16 @@ npm t
 There are test coverage results which will be generated in the `tests/coverage` area as well as be printed to the terminal once tests finishing running.
 You can view an HTML test coverage report from `tests/coverage/lcov-report/index.html`.
 
+### Build
+
+Simply run:
+
+```sh
+npm run build
+```
+
+The built application will be in the lib directory.
+
 ## Maintainers
 
 [@IanSmithers](https://github.com/IanSmithers).
