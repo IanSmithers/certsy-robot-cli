@@ -4,7 +4,8 @@
   "description": "A CLI to command and control a virtual robot.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "build": "babel src -d lib --extensions .ts,.js --ignore **/*.test.ts"
   },
   "author": "Ian Smithers",
   "license": "ISC",
@@ -12,8 +13,10 @@
     "bandersnatch": "^2.0.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.24.7",
     "@babel/core": "^7.24.7",
     "@babel/preset-env": "^7.24.7",
+    "@babel/preset-typescript": "^7.24.7",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.14.7",
     "babel-jest": "^29.7.0",
