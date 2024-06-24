@@ -20,8 +20,8 @@
         "noFallthroughCasesInSwitch": true,
         "baseUrl": "./src",
         "paths": {
-            "components/*": [
-                "./components/*"
+            "core/*": [
+                "./core/*"
             ],
             "types/*": [
                 "./types/*"

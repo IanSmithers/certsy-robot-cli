@@ -1,6 +1,6 @@
-import { Robot } from "components/robot.ts"
-import { Table } from "components/table.ts"
-import { Terminal } from "components/terminal.ts"
+import { Robot } from "core/robot.ts"
+import { Table } from "core/table.ts"
+import { Terminal } from "core/terminal.ts"
 
 /**
  * This test heavily tests the terminal and robot.

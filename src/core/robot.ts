@@ -1,5 +1,5 @@
 import { Bounds, RotationDirection, Transform, Vector2D } from "types/custom-types.ts";
-import { getDirectionData, isInBounds, rotateDirection, isValueCardinalDirection } from "helpers/helpers.ts";
+import { getDirectionData, isInBounds, rotateDirection, isValueCardinalDirection } from "helpers/bounds-helper.ts";
 
 /**
  * A class that represents a robot with some basic

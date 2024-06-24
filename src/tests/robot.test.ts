@@ -1,6 +1,6 @@
 
 import { Bounds } from "types/custom-types.ts"
-import { Robot } from "components/robot.ts"
+import { Robot } from "core/robot.ts"
 
 
 const bounds: Bounds = { minX: 0, maxX: 10, minY: 0, maxY: 5 }

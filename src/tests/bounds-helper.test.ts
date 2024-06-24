@@ -1,4 +1,4 @@
-import { getDirectionData, isInBounds, isValueCardinalDirection, rotateDirection } from "helpers/helpers"
+import { getDirectionData, isInBounds, isValueCardinalDirection, rotateDirection } from "helpers/bounds-helper.ts"
 import { Bounds, Vector2D, CardinalDirection, RotationDirection } from 'types/custom-types.ts'
 
 describe('isInBounds/2', () => {

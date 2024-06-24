@@ -1,7 +1,7 @@
 import { program, command, Program } from "bandersnatch"
 
-import { Robot } from "components/robot.ts"
-import { Table } from "components/table.ts"
+import { Robot } from "core/robot.ts"
+import { Table } from "core/table.ts"
 
 /**
  * A controlling class that manages the interactions

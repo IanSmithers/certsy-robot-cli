@@ -1,5 +1,5 @@
 
-import { Table } from "components/table";
+import { Table } from "core/table";
 
 import { Bounds } from "types/custom-types";
 

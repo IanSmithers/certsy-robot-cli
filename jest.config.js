@@ -7,7 +7,7 @@ module.exports = {
   coverageDirectory: './tests/coverage',
   rootDir: './src',
   moduleNameMapper: {
-    '^components/(.*)$': '<rootDir>/components/$1',
+    '^core/(.*)$': '<rootDir>/core/$1',
     '^types/(.*)$': '<rootDir>/types/$1',
     '^helpers/(.*)$': '<rootDir>/helpers/$1',
   }
