@@ -1,4 +1,4 @@
-import { Bounds, Vector2D, CardinalDirection, RotationDirection, CardinalDirections } from 'types/custom-types.ts'
+import { Bounds, Vector2D, CardinalDirection, RotationDirection, CardinalDirections } from 'types/custom-types'
 
 /**
  * Calculates whether a 2D position represented by a two point
